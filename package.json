@@ -1,0 +1,54 @@
+{
+  "name": "rspress-plugin-pinyin-search",
+  "version": "1.0.0",
+  "description": "Rspress plugin for Chinese full-pinyin and initial-letter search",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && tsc",
+    "prepack": "pnpm build",
+    "test": "pnpm build && node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "rspress",
+    "plugin",
+    "search",
+    "pinyin",
+    "chinese"
+  ],
+  "author": "buyfakett",
+  "license": "MIT",
+  "bugs": "https://github.com/buyfakett/rspress-plugin-pinyin-search/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buyfakett/rspress-plugin-pinyin-search"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "peerDependencies": {
+    "@rspress/core": "^2.1.0-beta.1"
+  },
+  "devDependencies": {
+    "@rspress/core": "2.1.0-beta.1",
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "pinyin-pro": "^3.29.5"
+  }
+}

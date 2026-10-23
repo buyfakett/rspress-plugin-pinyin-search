@@ -1,0 +1,31 @@
+# Source code is included via `files` implicitly but we can skip dev configs
+.eslintrc*
+.prettierrc*
+tsconfig.json
+
+# Test files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+tests/
+__tests__/
+test-component.mdx
+
+# Github workflows
+.github/
+
+# Development Environment
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Data
+.DS_Store
+.DS_Store?
+._*
+
+# Examples
+example.js
+utils.ts
